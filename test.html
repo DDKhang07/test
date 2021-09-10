@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./color.css">
+</head>
+<body>
+    <div class="color">
+        <span id ="hex">#191970</span>
+        <button onclick="getcolor()">New Color</button>
+    </div>
+        <script>
+            function getcolor(){
+                var symbol, color;
+                symbol="0123456789ABCDEF"
+                color="#"
+                for(let i=0; i<6;i++){
+                    color= color+ symbol[Math.floor(Math.random()*16)];
+
+                }
+                document.body.style.background=color;
+                document.getElementById("hex").innerHTML=color;
+            }
+        </script>
+    <script src="./test1A.js"></script>
+    <script src="./test1B.js"></script>
+</body>
+</html>
